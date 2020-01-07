@@ -1,6 +1,6 @@
 """Relay compatible Node interface."""
 interface Node {
-  """Global ID for a given object. Making a Change."""
+  """Global ID for a given object. Making a Change AGAIN."""
   id: ID!
 }
 
