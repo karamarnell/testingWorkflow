@@ -1,0 +1,41 @@
+"""Relay compatible Node interface."""
+interface Node {
+  """Global ID for a given object."""
+  id: ID!
+}
+
+"""Status event in the lifecycle of a transaction."""
+interface TransactionStatusEvent {
+  """New status of the transaction."""
+  status: TransactionStatus
+
+  """Date and time when the status event occurred."""
+  timestamp: Timestamp
+
+  """The amount of the transaction applicable to the status."""
+  amount: MonetaryAmount
+
+  """Source that caused the transaction status event to occur."""
+  source: TransactionSource
+
+  """Whether this is the final state for the transaction. If false, this transaction will pass into another subsequent state."""
+  terminal: Boolean
+}
+
+"""Evidence provided by a merchant to respond to a dispute."""
+interface DisputeEvidence {
+  """Unique identifier."""
+  id: ID!
+
+  """Legacy unique identifier."""
+  legacyId: ID!
+
+  """Date and time when the evidence was created with Braintree."""
+  createdAt: Timestamp
+
+  """Date and time when the evidence was sent to the processor."""
+  sentToProcessorAt: Timestamp
+
+  """The evidence category."""
+  category: String
+}
