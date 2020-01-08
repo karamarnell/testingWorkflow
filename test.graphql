@@ -4,7 +4,7 @@ interface Node {
   id: ID!
 }
 
-"""Status event in the lifecycle of a transaction MAKING A CHANGE."""
+"""Status event in the lifecycle of a transaction."""
 interface TransactionStatusEvent {
   """New status of the transaction."""
   status: TransactionStatus
