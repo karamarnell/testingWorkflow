@@ -4,7 +4,7 @@ interface Node {
   id: ID!
 }
 
-"""Status event in the lifecycle of a transaction KARA is making a change."""
+"""Status event in the lifecycle of a transaction."""
 interface TransactionStatusEvent {
   """New status of the transaction."""
   status: TransactionStatus
